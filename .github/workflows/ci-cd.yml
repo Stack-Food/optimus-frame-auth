@@ -67,8 +67,9 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build \
+            -f src/OptimusFrame.Auth.API/Dockerfile \
             -t $REGISTRY/$REPO_OWNER/$IMAGE_NAME:latest \
-            ./src/OptimusFrame.Auth.API
+            .
 
       - name: Push Docker Image
         run: |
