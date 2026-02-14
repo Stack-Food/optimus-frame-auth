@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BE51CC0F-6881-4FE4-981A-ED4B69BECC48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OptimusFrame.Auth.API", "OptimusFrame.Auth.API", "{626B238C-B90C-45CE-8C50-95BBFACCC77A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OptimusFrame.Auth.Application", "OptimusFrame.Auth.Application", "{9CC151CD-6AC5-4CC0-AA9C-9ADF0F437D1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OptimusFrame.Auth.Infrastructure", "OptimusFrame.Auth.Infrastructure", "{5868FD6C-966F-496D-A5A0-356855FB3050}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OptimusFrame.Auth.Domain", "OptimusFrame.Auth.Domain", "{A1D9C15E-9AA2-4AFE-B8DD-80B4E02737D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OptimusFrame.Auth.Tests", "OptimusFrame.Auth.Tests", "{612E0E14-733E-4B23-812A-3FA34A9D3F6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimusFrame.Auth.Application", "src\OptimusFrame.Auth.Application\OptimusFrame.Auth.Application.csproj", "{0106E075-F67B-4E54-857B-4A61461897F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimusFrame.Auth.API", "src\OptimusFrame.Auth.API\OptimusFrame.Auth.API.csproj", "{6C07E411-F472-4437-88C5-8721302936AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimusFrame.Auth.Domain", "src\OptimusFrame.Auth.Domain\OptimusFrame.Auth.Domain.csproj", "{83CB91D6-C250-4BDC-8189-FAFEB2059381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimusFrame.Auth.Infrastructure", "src\OptimusFrame.Auth.Infrastructure\OptimusFrame.Auth.Infrastructure.csproj", "{87D1629F-CD01-45F7-AB81-09E63F700DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimusFrame.Auth.Tests", "tests\OptimusFrame.Auth.Tests\OptimusFrame.Auth.Tests.csproj", "{45D613E3-695D-4281-85E9-B17104C29849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0106E075-F67B-4E54-857B-4A61461897F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0106E075-F67B-4E54-857B-4A61461897F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0106E075-F67B-4E54-857B-4A61461897F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0106E075-F67B-4E54-857B-4A61461897F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C07E411-F472-4437-88C5-8721302936AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C07E411-F472-4437-88C5-8721302936AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C07E411-F472-4437-88C5-8721302936AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C07E411-F472-4437-88C5-8721302936AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CB91D6-C250-4BDC-8189-FAFEB2059381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CB91D6-C250-4BDC-8189-FAFEB2059381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CB91D6-C250-4BDC-8189-FAFEB2059381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CB91D6-C250-4BDC-8189-FAFEB2059381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D1629F-CD01-45F7-AB81-09E63F700DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D1629F-CD01-45F7-AB81-09E63F700DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D1629F-CD01-45F7-AB81-09E63F700DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D1629F-CD01-45F7-AB81-09E63F700DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D613E3-695D-4281-85E9-B17104C29849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D613E3-695D-4281-85E9-B17104C29849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D613E3-695D-4281-85E9-B17104C29849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D613E3-695D-4281-85E9-B17104C29849}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{626B238C-B90C-45CE-8C50-95BBFACCC77A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{9CC151CD-6AC5-4CC0-AA9C-9ADF0F437D1C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5868FD6C-966F-496D-A5A0-356855FB3050} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A1D9C15E-9AA2-4AFE-B8DD-80B4E02737D2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{612E0E14-733E-4B23-812A-3FA34A9D3F6B} = {BE51CC0F-6881-4FE4-981A-ED4B69BECC48}
+		{0106E075-F67B-4E54-857B-4A61461897F1} = {9CC151CD-6AC5-4CC0-AA9C-9ADF0F437D1C}
+		{6C07E411-F472-4437-88C5-8721302936AF} = {626B238C-B90C-45CE-8C50-95BBFACCC77A}
+		{83CB91D6-C250-4BDC-8189-FAFEB2059381} = {A1D9C15E-9AA2-4AFE-B8DD-80B4E02737D2}
+		{87D1629F-CD01-45F7-AB81-09E63F700DE0} = {5868FD6C-966F-496D-A5A0-356855FB3050}
+		{45D613E3-695D-4281-85E9-B17104C29849} = {612E0E14-733E-4B23-812A-3FA34A9D3F6B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9537C41D-02D9-4CEC-968D-BD1E598F9801}
+	EndGlobalSection
+EndGlobal
