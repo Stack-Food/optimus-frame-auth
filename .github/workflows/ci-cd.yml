@@ -1,0 +1,72 @@
+name: OptimusFrame Auth CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+env:
+  DOTNET_VERSION: '8.0.x'
+  REGISTRY: ghcr.io
+  IMAGE_NAME: optimusframe-auth-api
+
+jobs:
+
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore dependencies
+        run: dotnet restore OptimusFrame.Auth.sln
+
+      - name: Build solution
+        run: dotnet build OptimusFrame.Auth.sln --configuration Release --no-restore
+
+      - name: Run tests
+        run: dotnet test OptimusFrame.Auth.sln --configuration Release --no-build --collect:"XPlat Code Coverage"
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: '**/coverage.cobertura.xml'
+
+  docker-build-and-push:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    needs: build-and-test
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build Docker Image
+        run: |
+          docker build \
+            -t $REGISTRY/${{ github.repository_owner }}/$IMAGE_NAME:latest \
+            ./src/OptimusFrame.Auth.API
+
+      - name: Push Docker Image
+        run: |
+          docker push $REGISTRY/${{ github.repository_owner }}/$IMAGE_NAME:latest
