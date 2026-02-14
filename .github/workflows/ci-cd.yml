@@ -13,7 +13,7 @@ on:
 env:
   DOTNET_VERSION: '8.0.x'
   REGISTRY: ghcr.io
-  IMAGE_NAME: optimusframe-auth-api
+  IMAGE_NAME: optimusframe-auth
 
 jobs:
 
