@@ -1,10 +1,38 @@
 # OptimusFrame.Auth
 
-Microserviço de autenticação e autorização do sistema OptimusFrame, responsável pelo gerenciamento de usuários, registro, login e geração de tokens JWT utilizando AWS Cognito.
+> 🔐 **Microserviço de autenticação e autorização do sistema OptimusFrame com integração AWS Cognito e JWT**
 
-## Visão Geral
+[![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com/)
+[![AWS Cognito](https://img.shields.io/badge/AWS-Cognito-FF9900)](https://aws.amazon.com/cognito/)
+[![JWT](https://img.shields.io/badge/Auth-JWT-000000)](https://jwt.io/)
+[![Clean Architecture](https://img.shields.io/badge/Architecture-Clean-blue)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+
+## 📑 Índice
+
+- [Visão Geral](#-visão-geral)
+- [Arquitetura](#-arquitetura)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Pré-requisitos](#-pré-requisitos)
+- [Configuração do AWS Cognito](#-configuração-do-aws-cognito)
+- [Como Executar](#-como-executar)
+- [API Endpoints](#-api-endpoints)
+- [Estrutura de Tokens JWT](#-estrutura-de-tokens-jwt)
+- [Fluxo de Autenticação](#-fluxo-de-autenticação)
+- [Testes](#-testes)
+- [CI/CD](#-cicd)
+- [Segurança](#-segurança)
+- [Troubleshooting](#-troubleshooting)
+
+## 🚀 Visão Geral
 
 O **OptimusFrame.Auth** é a API de autenticação centralizada do sistema OptimusFrame que gerencia todo o ciclo de vida de autenticação de usuários. Ele integra-se com AWS Cognito para fornecer autenticação segura, gerenciamento de identidades e geração de tokens JWT.
+
+**Funcionalidades Principais:**
+- Registro de novos usuários
+- Autenticação com email e senha
+- Geração de tokens JWT (ID Token)
+- Validações de entrada robustas
+- Integração completa com AWS Cognito
 
 ## Arquitetura
 
